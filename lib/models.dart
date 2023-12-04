@@ -11,15 +11,15 @@ class Movie {
     this.actors,
   });
 
-  final String bannerUrl;
-  final String posterUrl;
-  final String title;
-  final double rating;
-  final int starRating;
-  final List<String> categories;
-  final String storyline;
-  final List<String> photoUrls;
-  final List<Actor> actors;
+  final String? bannerUrl;
+  final String? posterUrl;
+  final String? title;
+  final double? rating;
+  final int? starRating;
+  final List<String>? categories;
+  final String? storyline;
+  final List<String>? photoUrls;
+  final List<Actor>? actors;
 }
 
 class Actor {
@@ -28,6 +28,6 @@ class Actor {
     this.avatarUrl,
   });
 
-  final String name;
-  final String avatarUrl;
+  final String? name;
+  final String? avatarUrl;
 }

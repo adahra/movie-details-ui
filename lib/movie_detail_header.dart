@@ -9,12 +9,12 @@ class MovieDetailHeader extends StatelessWidget {
   final Movie movie;
 
   List<Widget> _buildCategoryChips(TextTheme textTheme) {
-    return movie.categories.map((category) {
+    return movie.categories!.map((category) {
       return Padding(
         padding: const EdgeInsets.only(right: 8.0),
         child: Chip(
           label: Text(category),
-          labelStyle: textTheme.caption,
+          labelStyle: textTheme.bodySmall,
           backgroundColor: Colors.black12,
         ),
       );
@@ -29,13 +29,15 @@ class MovieDetailHeader extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          movie.title,
-          style: textTheme.title,
+          movie.title!,
+          style: textTheme.titleLarge,
         ),
         SizedBox(height: 8.0),
         RatingInformation(movie),
         SizedBox(height: 12.0),
-        Row(children: _buildCategoryChips(textTheme)),
+        Row(
+          children: _buildCategoryChips(textTheme),
+        ),
       ],
     );
 
@@ -43,7 +45,7 @@ class MovieDetailHeader extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(bottom: 140.0),
-          child: ArcBannerImage(movie.bannerUrl),
+          child: ArcBannerImage(movie.bannerUrl!),
         ),
         Positioned(
           bottom: 0.0,
@@ -54,7 +56,7 @@ class MovieDetailHeader extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Poster(
-                movie.posterUrl,
+                movie.posterUrl!,
                 height: 180.0,
               ),
               SizedBox(width: 16.0),

@@ -13,12 +13,12 @@ class ActorScroller extends StatelessWidget {
       child: Column(
         children: [
           CircleAvatar(
-            backgroundImage: AssetImage(actor.avatarUrl),
+            backgroundImage: AssetImage(actor.avatarUrl!),
             radius: 40.0,
           ),
           Padding(
             padding: const EdgeInsets.only(top: 8.0),
-            child: Text(actor.name),
+            child: Text(actor.name!),
           ),
         ],
       ),
@@ -36,7 +36,7 @@ class ActorScroller extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Text(
             'Actors',
-            style: textTheme.subhead.copyWith(fontSize: 18.0),
+            style: textTheme.titleMedium!.copyWith(fontSize: 18.0),
           ),
         ),
         SizedBox.fromSize(

@@ -11,7 +11,6 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        accentColor: const Color(0xFFFF5959),
       ),
       home: MovieDetailsPage(testMovie),
     );

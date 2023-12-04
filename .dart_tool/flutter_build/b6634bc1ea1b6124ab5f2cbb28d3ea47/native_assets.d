@@ -1,0 +1,1 @@
+ /home/adnanto/Unduhan/movie_details_ui/.dart_tool/flutter_build/b6634bc1ea1b6124ab5f2cbb28d3ea47/native_assets.yaml: 
